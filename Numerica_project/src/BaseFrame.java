@@ -20,7 +20,7 @@ public class BaseFrame extends Frame implements WindowListener, ConvertListener 
 		int height = (int)rec.getHeight() / 2;
 		int x = ((int)rec.getWidth() / 2) - (width / 2);
 		int y = ((int)rec.getHeight() / 2) - (height / 2);
-		setBounds( x, y, width, height );
+		setLocation(x, y);
 		setVisible(true);
 		addWindowListener(this);
 
@@ -43,6 +43,7 @@ public class BaseFrame extends Frame implements WindowListener, ConvertListener 
 			convertListener.push(np);
 		}
 		
+		setSize(width, height);	// update and size set
 	}
 	
 	@Override
